@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com DOM</title>
+    <style>
+        body {
+            max-width: 800px;
+            background-color: aqua;
+            color: rgb(51, 51, 71);
+            font-family: 30px;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.445);
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+    <div class="teste">
+        <P>Aqui vai o resultado</P>
+    </div>
+    <p>Aprendendo a usar o <strong>DOM</strong> com JS </p>
+    <div id="msg">Clque em mim!</div>
+    
+</body>
+
+<script>
+    var p1 = window.document.getElementsByTagName('p')[0]
+    window.document.write(p1.innerText)
+    p1.style.color = 'blue'
+    var d = window.document.getElementById('msg')
+
+    msg.style.background = 'white'
+
+    var fogo = window.document.querySelector('div.teste')
+
+    fogo.style.background = 'green'
+
+    //query selector é bem melhor
+
+</script>
+</html>
