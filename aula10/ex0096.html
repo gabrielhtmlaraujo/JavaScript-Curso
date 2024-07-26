@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1s ainda</title>
+    <style>
+        div#pod {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#teste2 {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="pod">
+        Interaja
+    </div>
+
+    <div id="teste2">
+        Mais um teste
+    </div>
+</body>
+
+<script>
+    var pod = window.document.querySelector('div#pod')
+    pod.addEventListener('click', clicar)
+    pod.addEventListener('mouseenter', entrar)
+    pod.addEventListener('mouseout', sair)
+
+
+    function clicar() {
+        pod.innerHTML='Clicou!'
+        pod.style.background='black'
+    }
+
+    function entrar() {
+        pod.innerText='entrou'
+    }
+
+    function sair() {
+        pod.innerText=('Saiu')
+    }
+
+        
+
+    var teste2 = window.document.querySelector('div#teste2')
+    
+    teste2.addEventListener('click', clicarr)
+
+    teste2.addEventListener('mouseenter', entrarr)
+
+    teste2.addEventListener('mouseout', sairr)
+
+    teste2.addEventListener('mouseenter', borderentrar)
+
+    teste2.addEventListener('mouseout', bordersair)
+
+    teste2.addEventListener('click', borderclick)
+
+    function clicarr() {
+    teste2.innerText='Cliquei!'
+
+    }
+
+    function entrarr() {
+        teste2.innerText='entrou'
+        teste2.style.background='blue'
+    }
+
+    function sairr() {
+        teste2.innerText='saiu'
+    }
+    function borderentrar() {
+        teste2.style.borderRadius='10%';
+        teste2.style.transitionDuration='0.5s';
+    }
+
+    function bordersair() {
+        teste2.style.borderRadius='0';
+        teste2.style.transitionDuration='1.2s';
+        teste2.style.color='white'
+        teste2.style.background = 'linear-gradient(to right, black, blue)'
+
+    }
+
+    function borderclick() {
+        teste2.style.borderRadius='50%';
+
+        teste2.style.background = 'linear-gradient(to right, black,gray)'
+    }
+
+    
+
+</script>
+</html>
