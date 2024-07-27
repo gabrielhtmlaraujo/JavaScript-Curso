@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores mais uma vez</title>
+</head>
+<body>
+    <h1>Somando valores mais uma vez</h1>
+
+    <input type="number" name="n1" id="num1">
+    <input type="number" name="n2" id="num2">
+    <input type="button" value="Somar" id="somar">
+    <div id="resultado">Resultado</div>
+
+    <h1>Subtraindo números</h1>
+
+    <input type="number" name="sub1" id="sub1">
+    <input type="number" name="sub2" id="sub2">
+    <input type="button" value="subtrair" id="subtrair">
+    <div id="results">Resultado</div>
+</body>
+    <script>
+        var n1 = window.document.querySelector('input#num1')
+        var n2 = window.document.querySelector('input#num2')
+        var somar = window.document.querySelector('input#somar')
+        var resultado = window.document.querySelector('div#resultado')
+
+        somar.addEventListener('click', clicar)
+ 
+        function clicar() {
+            var n1Inteiro = Number(n1.value)
+            var n2Inteiro = Number(n2.value)
+            var s = n1Inteiro+n2Inteiro
+            resultado.innerHTML=`A soma de ${n1Inteiro} e${n2Inteiro} é ${s}`            
+        }
+
+
+        var N1 = window.document.querySelector('input#sub1')
+        var N2 = window.document.querySelector('input#sub2')
+        var subtrair = window.document.querySelector('input#subtrair')
+        var results = window.document.querySelector('div#results')
+
+        subtrair.addEventListener('click',cliquei)
+
+        function cliquei() {
+            var nn1 = Number(N1.value)
+            var nn2 = Number(N2.value)
+            var g = nn1 - nn2
+            results.innerHTML = `A subtração de ${nn1} e ${nn2}, é: ${g}`
+        }
+    </script>
+</html>
