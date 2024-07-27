@@ -23,18 +23,17 @@
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="Somar">
     <div id="res">resultado</div>
-    <div id="teste" onclick="clicou()">teste</div>
+    <div id="teste">teste</div>
 </body>
 </html>
 <script>
-    var tn1= window.document.querySelector('input#txtn1')
-    var tn2= window.document.querySelector('input#txtn2')
-    var s = window.document.querySelector('div#res')
-    var n1= Number(tn1.value)
-    var n2= Number(tn2.value)
+    
+    var teste = window.document.querySelector('div#teste')
+    teste.addEventListener('click', clicou)
 
-    function clicou {
-        var 
+    function clicou() {
+        teste.style.background='blue'
+        teste.style.transitionDuration='2.2s'
     }
 
 </script>
