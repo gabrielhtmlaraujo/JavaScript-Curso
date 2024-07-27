@@ -29,6 +29,36 @@
             font-size: 30px;
             border-radius: 10%;
         }
+
+        div#teste3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            line-height: 300px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        div#teste4 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            line-height: 300px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +68,14 @@
 
     <div id="teste2">
         Mais um teste
+    </div>
+
+    <div id="teste3">
+        terceiro teste
+    </div>
+
+    <div id="teste4">
+        quarto teste
     </div>
 </body>
 
@@ -109,7 +147,60 @@
         teste2.style.background = 'linear-gradient(to right, black,gray)'
     }
 
-    
+    var teste3 = window.document.querySelector('div#teste3')
+
+    teste3.addEventListener('mouseenter', entradinha)
+    teste3.addEventListener('click', clicadinha)
+    teste3.addEventListener('mouseout', saidinha)
+
+    function entradinha() {
+        teste3.style.background = 'white';
+        teste3.style.color = 'black';
+        teste3.style.transitionDuration = '1.5s'
+    }
+
+    function clicadinha() {
+        teste3.style.background = 'linear-gradient(to right, black, white)';
+        teste3.style.borderRadius = '50%'
+        teste3.style.transitionDuration = '1.5s'
+    }
+
+    function saidinha() {
+        teste3.style.background='red';
+        teste3.style.color='pink';
+        teste3.style.transitionDuration = '1.5s'
+        teste3.style.borderRadius = '10%'
+    }
+
+
+    var teste4=window.document.querySelector('div#teste4')
+
+    teste4.addEventListener('mouseenter', entrada4)
+    teste4.addEventListener('click', clique4)
+    teste4.addEventListener('mouseout', saida4)
+
+    function entrada4 () {
+        teste4.style.background='gray'
+        teste4.style.border='5px solid yellow'
+        teste4.style.transitionDuration='1.2s'
+    }
+
+    function clique4() {
+        teste4.style.background='blue'
+        teste4.style.borderRadius='50%'
+        teste4.style.color='gray'
+        teste4.style.background='yellow'
+        teste4.style.transitionDuration='1.2s'
+        teste4.innerText='cliquei!'
+    }
+
+    function saida4() {
+        teste4.style.background='black'
+        teste4.style.color='yellow'
+        teste4.style.borderRadius='10%'
+        teste4.style.transitionDuration='1.2s'
+        teste4.innerText='sai!'
+    }
 
 </script>
 </html>
