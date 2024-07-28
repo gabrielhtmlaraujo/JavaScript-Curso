@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando valores</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Somar" id="somar">
+    <div id="resultado">Resultado</div>
+</body>
+
+<script>
+    var num1 = window.document.querySelector('input#num1')
+    var num2 = window.document.querySelector('input#num2')
+    var somar = window.document.querySelector('input#somar')
+    var resultado = window.document.querySelector('div#resultado')
+
+    somar.addEventListener('click', clicar)
+
+    function clicar() {
+        var nn1 = Number(num1.value)
+        var nn2 = Number(num2.value)
+        var s = nn1 + nn2
+        resultado.innerHTML = `O resultado da soma é ${s}`
+    }
+</script>
+</html>
