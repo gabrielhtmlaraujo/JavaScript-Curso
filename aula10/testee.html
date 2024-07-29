@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste das divs</title>
+    <style>
+        div#caixa {
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            border-radius: 14px 14px 0px 14px
+        }
+
+input#botao {
+            background-color: aqua;
+            margin-left: 670px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">Caixa</div>
+    <input type="button" value="Clique aqui para mudar" id="botao">
+</body>
+</html>
+<script>
+    var caixa = window.document.querySelector('div#caixa')
+    var botao = window.document.querySelector('input#botao')
+
+    botao.addEventListener('click', clicar)
+    botao.addEventListener('mouseenter', entrou)
+    botao.addEventListener('mouseout',saiu)
+
+    function clicar() {
+        caixa.style.background='blue'
+        caixa.style.borderRadius='24px 24px 0px 24px'
+        caixa.style.transitionDuration='1.2s'
+        caixa.innerHTML='Clicou'
+    }
+
+    function entrou() {
+        caixa.style.background='gray'
+    }
+
+    function saiu() {
+        caixa.style.background='black'
+        caixa.innerHTML='Caixa'
+    }
+    </script>
